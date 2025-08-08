@@ -372,7 +372,7 @@ b {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 720px) {
   .nav-menu {
     gap: 8px;
   }
@@ -389,3 +389,4 @@ b {
     font-size: 8rem;
   }
 }
+
