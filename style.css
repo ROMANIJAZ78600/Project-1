@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.rope {
+  height: 20px;
+  background-color: black;
+  width: 2px;
+  margin-left: 44px;
+  transition: ease 0.5s;
+}
+.btn {
+  height: 30px;
+  background-color: black;
+  width: 20px;
+  margin-left: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-end-end-radius: 5px;
+  border-end-start-radius: 5px;
+}
+#menu-btn {
+  position: fixed;
+  z-index: 1000;
+}
+.navbar {
+  display: none;
+  position: fixed;
+  background-color: black;
+  z-index: 1000;
+}
+.navbar-item {
+  position: relative;
+  width: 100vw;
+  flex-direction: column;
+  animation: slideDown 0.8s ease;
+  background-color: black;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  gap: 30px;
+}
+.nav-item {
+  color: #ccc;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.nav-menu li {
+  list-style: none;
+}
+.nav-menu li i {
+  font-size: 24px;
+  margin-left: 7px;
+}
+
+.nav-item:hover {
+  color: #ffcc00;
+}
+#variety {
+  background-color: #2b2b2b;
+  height: 90vh;
+  text-align: center;
+}
+.header {
+  text-align: center;
+  padding: 150px;
+}
+.header h1 {
+  font-size: 60px;
+  color: #ccc;
+}
+.header .icon {
+  font-size: 10rem;
+  margin-top: 75px;
+  color: #c3b135;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: inline-block;
+}
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-out {
+  opacity: 0;
+  transform: scale(0.2);
+}
+#Meals-cards {
+  height: 90vh;
+  background-color: #202020;
+  padding: 35px;
+}
+h2 {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
+.first,
+.second,
+.third {
+  height: 330px;
+  width: 200px;
+  background-color: #c3b135;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  gap: 35px;
+  box-shadow: -8px 3px 5px #fad903;
+}
+.first i {
+  font-size: 100px;
+}
+b {
+  font-size: 25px;
+}
+.first button,
+.second button,
+.third button {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  perspective: 1000px;
+  padding: 55px;
+}
+.first:hover,
+.second:hover,
+.third:hover {
+  transform: translateY(-30px);
+}
+
+.second i {
+  font-size: 100px;
+}
+
+.third i {
+  font-size: 100px;
+}
+
+#gallery {
+  background-color: #2b2b2b;
+  height: 95vh;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 35px;
+}
+.card-wrapper {
+  position: relative;
+}
+.card-wrapper::before,
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  z-index: -2;
+  filter: blur(2px);
+}
+
+.card-wrapper::after {
+  top: 20px;
+  right: -20px;
+  z-index: -3;
+  opacity: 0.6;
+}
+.card {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  border: 4px solid transparent;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  box-shadow: 0 0 25px rgba(red, green, blue, 0);
+  transform: scale(1.1);
+  filter: blur(3px) brightness(0.8);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 4px;
+  pointer-events: none;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 150, 0.6);
+  transform: scale(1.03);
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+.overlay h5 {
+  position: relative;
+  font-size: 24px;
+  margin: 0;
+  overflow: hidden;
+}
+.overlay h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: black;
+  transition: left 0.5s ease;
+}
+.overlay h5::after,
+.overlay p::before {
+  transition: 0.5s;
+}
+.overlay h5 {
+  position: relative;
+  font-size: 24px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ff4f4f;
+  width: 0;
+}
+
+.card:hover .overlay h5 {
+  animation: typing 1.5s steps(11, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.overlay h5::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  bottom: -5px;
+  height: 3px;
+  width: 100%;
+  background: #ff4f4f;
+  transition: left 0.5s ease;
+}
+
+.card:hover .overlay h5::after {
+  left: 0;
+  transition-delay: 1.5s; /* starts after typing finishes */
+}
+.overlay p {
+  margin-top: 15px;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 1.5s;
+}
+
+.card:hover .overlay p {
+  opacity: 1;
+}
+#contact {
+  height: 35vh;
+  background-color: #202020;
+}
+.product-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+.signup h3 {
+  font-size: 20px;
+  color: #fad903;
+  margin-top: 30px;
+}
+.email {
+  position: relative;
+}
+.email input {
+  margin-top: 30px;
+  padding: 0.5rem;
+  border: 2px solid white;
+  width: 100%;
+}
+.email button {
+  background: black;
+  color: white;
+  padding: 5px;
+  height: 30%;
+  margin-right: 15px;
+  aspect-ratio: 1;
+  position: absolute;
+  right: -33px;
+  top: 33px;
+}
+#contact p {
+  text-align: center;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+@media screen(max-width:400px) {
+  .nav-menu {
+    gap: 8px;
+  }
+  .nav-item {
+    font-size: 17px;
+  }
+  .nav-item li a i {
+    font-size: 18px;
+  }
+}
