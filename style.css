@@ -392,4 +392,31 @@ b {
   #variety {
     height: 80vh;
   }
+  h2 {
+    font-size: 20px;
+  }
+  #Meals-cards {
+    height: 170vh;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .first,
+  .second,
+  .third {
+    height: 260px;
+  }
+  #gallery {
+    height: 170vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .card {
+    height: 150px;
+    width: 150px;
+  }
 }
