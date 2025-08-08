@@ -372,7 +372,7 @@ b {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 400px) {
   .nav-menu {
     gap: 8px;
   }
@@ -386,7 +386,10 @@ b {
     font-size: 19px;
   }
   .header .icon {
-    font-size: 8rem;
+    font-size: 7rem;
+    margin-left: -20px;
+  }
+  #variety {
+    height: 80vh;
   }
 }
-
