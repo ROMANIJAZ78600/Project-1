@@ -372,7 +372,7 @@ b {
   margin-top: 20px;
 }
 
-@media screen(max-width:400px) {
+@media screen and (max-width: 400px) {
   .nav-menu {
     gap: 8px;
   }
@@ -381,5 +381,11 @@ b {
   }
   .nav-item li a i {
     font-size: 18px;
+  }
+  .header h1 {
+    font-size: 19px;
+  }
+  .header .icon {
+    font-size: 8rem;
   }
 }
